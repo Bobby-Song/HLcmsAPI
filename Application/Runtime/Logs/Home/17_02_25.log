@@ -1,0 +1,2959 @@
+[ 2017-02-25T16:49:30+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/login?phoneNumber=17681952933&phonePass=123456
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_phoner` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `hl_phoner` WHERE ( phone_number = '17681952933' )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T16:49:30+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `hl_area` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `style` = 1  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 3  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `hl_area` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_area` WHERE `id` <> '4' AND `type` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 5  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 6  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 92  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pic`,`videos` FROM `hl_content` WHERE `types` = 35 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 37 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 33 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:49:32+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0040s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 3 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:50:47+08:00 ] 127.0.0.1 /HLcmsAPI/HLcms/titleSearch/title//u516b/u560e
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time`,`node_id` FROM `hl_content` WHERE `title` LIKE '%u516b%' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:50:52+08:00 ] 127.0.0.1 /HLcmsAPI/HLcms/titleSearch/title/u516b/u560e
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time`,`node_id` FROM `hl_content` WHERE `title` LIKE '%u516b%' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:51:08+08:00 ] 127.0.0.1 /HLcmsAPI/HLcms/titleSearch/title//u5c31/u662f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time`,`node_id` FROM `hl_content` WHERE `title` LIKE '%u5c31%' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:51:12+08:00 ] 127.0.0.1 /HLcmsAPI/HLcms/titleSearch/title/u5c31/u662f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time`,`node_id` FROM `hl_content` WHERE `title` LIKE '%u5c31%' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:51:20+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0050s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 3 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:51:41+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/login?phoneNumber=17681952933&phonePass=123456
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_phoner` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `hl_phoner` WHERE ( phone_number = '17681952933' )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T16:51:42+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_area` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `style` = 1  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 3  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `hl_area` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_area` WHERE `id` <> '4' AND `type` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 5  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 6  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 92  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pic`,`videos` FROM `hl_content` WHERE `types` = 35 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 37 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 33 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:51:46+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 3 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T16:52:38+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/login?phoneNumber=17681952933&phonePass=123456
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_phoner` [ RunTime:0.0260s ]
+SQL: SELECT * FROM `hl_phoner` WHERE ( phone_number = '17681952933' )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T16:52:39+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `hl_area` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `style` = 1  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 3  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `hl_area` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_area` WHERE `id` <> '4' AND `type` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 5  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 6  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 92  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pic`,`videos` FROM `hl_content` WHERE `types` = 35 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 37 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 33 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T16:52:41+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0020s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 3 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:54:37+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/login?phoneNumber=17681952933&phonePass=123456
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_phoner` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `hl_phoner` WHERE ( phone_number = '17681952933' )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:54:37+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `hl_area` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `style` = 1  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 3  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `hl_area` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_area` WHERE `id` <> '4' AND `type` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 5  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 6  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 92  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pic`,`videos` FROM `hl_content` WHERE `types` = 35 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 37 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 33 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:54:38+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0050s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 3 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T16:57:32+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/login?phoneNumber=17681952933&phonePass=123456
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `hl_phoner` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `hl_phoner` WHERE ( phone_number = '17681952933' )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011001s ]
+
+[ 2017-02-25T16:57:34+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `hl_area` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `style` = 1  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 3  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `hl_area` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_area` WHERE `id` <> '4' AND `type` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 5  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 6  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 92  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pic`,`videos` FROM `hl_content` WHERE `types` = 35 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 37 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 33 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:57:36+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 3 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T16:57:37+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0080s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T16:57:38+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0050s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:57:38+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '35' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 35  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '39' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:57:51+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0070s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:57:53+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:57:54+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T16:58:22+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0070s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:58:29+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T16:58:43+08:00 ] 127.0.0.1 /HLcmsAPI/HLcms/titleSearch/title/%E6%AF%9B%E4%B8%BB%E5%B8%AD
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time`,`node_id` FROM `hl_content` WHERE `title` LIKE '%毛主席%' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:08:25+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/login?phoneNumber=17681952933&phonePass=123456
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_phoner` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `hl_phoner` WHERE ( phone_number = '17681952933' )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:08:25+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_area` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `style` = 1  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 3  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `hl_area` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_area` WHERE `id` <> '4' AND `type` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 5  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 6  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 92  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pic`,`videos` FROM `hl_content` WHERE `types` = 35 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 37 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 33 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:08:26+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 3 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:08:27+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:08:29+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:08:29+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '35' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 35  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '39' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:08:31+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0250s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:08:31+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:08:33+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:08:33+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:08:33+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '35' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 35  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '39' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:08:35+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 3 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:10:03+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/login?phoneNumber=17681952933&phonePass=123456
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_phoner` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `hl_phoner` WHERE ( phone_number = '17681952933' )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:10:03+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_area` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `style` = 1  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 3  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `hl_area` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_area` WHERE `id` <> '4' AND `type` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 5  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 6  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 92  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pic`,`videos` FROM `hl_content` WHERE `types` = 35 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 37 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 33 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:10:04+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 3 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:10:04+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0080s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:10:06+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:10:07+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:10:08+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '35' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 35  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '39' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:10:09+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0220s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:15:34+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/login?phoneNumber=17681952933&phonePass=123456
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_phoner` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `hl_phoner` WHERE ( phone_number = '17681952933' )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:15:34+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `hl_area` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `style` = 1  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 3  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `hl_area` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_area` WHERE `id` <> '4' AND `type` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 5  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 6  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 92  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pic`,`videos` FROM `hl_content` WHERE `types` = 35 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 37 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 33 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:15:35+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 3 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:15:35+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0080s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:15:38+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0050s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:18+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/login?phoneNumber=17681952933&phonePass=123456
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_phoner` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `hl_phoner` WHERE ( phone_number = '17681952933' )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:17:18+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_area` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `style` = 1  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 3  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `hl_area` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_area` WHERE `id` <> '4' AND `type` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 5  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 6  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 92  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pic`,`videos` FROM `hl_content` WHERE `types` = 35 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 37 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `hl_content` WHERE `types` = 33 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:17:19+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0080s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 3 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-25T17:17:19+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0080s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:21+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0070s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:17:21+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:22+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0060s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '35' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 35  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '39' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:22+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:17:22+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:17:23+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0060s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:17:23+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:24+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0060s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:24+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '35' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 35  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '39' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:24+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:25+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:25+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0050s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:17:25+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0070s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:25+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0060s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:17:26+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:17:26+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '35' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 35  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '39' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:26+08:00 ] 127.0.0.1 //HLcmsAPI/HLcms/titleSearch/title/_E5_85_AB_E5_98_8E
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time`,`node_id` FROM `hl_content` WHERE `title` LIKE '%_E5_85_AB_E5_98_8E%' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:17:27+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0060s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:27+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0040s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:17:28+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '35' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 35  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '39' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:17:29+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:31+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0080s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 2 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '14' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 14  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '23' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:17:32+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=14
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0080s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 14 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 14 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '14' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 14  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '23' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:33+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=15
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0070s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '15' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 15  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '24' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:35+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '16' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 16  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '25' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:35+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '17' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 17  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '26' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:17:36+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=18
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 18 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 18 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '18' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 18  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '27' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:17:42+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNormalNode?nodeID=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:getNormalNode
+
+[ 2017-02-25T17:18:14+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hl_area` [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `hl_area` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pic` FROM `hl_content` WHERE `area_id` = 3 AND `types` = 150 AND `status` = 2 ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `hl_node` WHERE `pid` = 4  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:18:34+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 5 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '75' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 75  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '79' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:18:46+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/75
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '75' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 75  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '79' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:20:29+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 3 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:20:29+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:20:30+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:20:30+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:20:31+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '35' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 35  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '39' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:20:31+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0050s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:20:31+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:20:32+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:20:32+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:20:32+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:20:33+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '35' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 35  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '39' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:20:43+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:20:46+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:20:47+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:20:51+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:20:52+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:20:52+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:20:53+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:22:50+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/76
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0060s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 76 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 76 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '76' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 76  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '80' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '81' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:26:18+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/76
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0050s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 76 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 76 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '76' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 76  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '80' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '81' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:26:24+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/80
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0060s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 80 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '80' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:26:58+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/77
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0050s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 77 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 77 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '77' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 77  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '82' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:27:32+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/82
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 82 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '82' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:28:28+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/78
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0040s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 78 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 78 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '78' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 78  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '83' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '84' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '85' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '86' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:28:43+08:00 ] 127.0.0.1 /HLcmsAPI/HLcms/titleSearch/?title=%E5%85%AB%E5%98%8E
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time`,`node_id` FROM `hl_content` WHERE `title` LIKE '%八嘎%' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:28:46+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/83
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 83 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '83' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:28:50+08:00 ] 127.0.0.1 /HLcmsAPI/HLcms/titleSearch/?title=%E5%B0%B1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time`,`node_id` FROM `hl_content` WHERE `title` LIKE '%就%' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:29:14+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0060s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 5 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '75' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 75  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '79' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:29:30+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0050s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 6 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '87' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 87  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '89' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '90' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:29:53+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/87
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 87 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 87 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '87' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 87  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '89' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '90' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:30:14+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/132
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:30:51+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/89
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 89 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '89' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:31:48+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0050s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 88 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 88 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '88' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 88  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '91' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:32:07+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/91
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0070s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '91' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:32:54+08:00 ] 127.0.0.1 /HLcmsAPI/HLcms/titleSearch/?title=%E5%B0%B1%E9%85%B1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time`,`node_id` FROM `hl_content` WHERE `title` LIKE '%就酱%' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:33:41+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/92
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0060s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 92 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 92 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '93' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 93  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '95' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:33:57+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/93
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0020s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 93 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 93 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '93' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 93  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '95' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:34:22+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/94
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0020s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '94' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 94  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '96' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '97' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '98' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '99' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '100' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:34:38+08:00 ] 192.168.1.157 /HLcmsAPI/HLcms/getNode/nodeID/96
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0050s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 96 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '96' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:34:46+08:00 ] 127.0.0.1 /HLcmsAPI/HLcms/titleSearch/?title=%E5%B0%B1%E9%85%B1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time`,`node_id` FROM `hl_content` WHERE `title` LIKE '%就酱%' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:36:08+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNormalNode?nodeID=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:getNormalNode
+
+[ 2017-02-25T17:36:10+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 3 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:36:10+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0080s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:36:11+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:36:12+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:36:12+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:36:13+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '35' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 35  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '39' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:36:14+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:36:14+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:36:14+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:36:16+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 2 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '14' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 14  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '23' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:36:16+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=14
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 14 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 14 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '14' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 14  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '23' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:36:18+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=15
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '15' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 15  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '24' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:36:19+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '16' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 16  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '25' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:36:20+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '17' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 17  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '26' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:36:20+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=18
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 18 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 18 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '18' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 18  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '27' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:36:21+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=19
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 19 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 19 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '19' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 19  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '28' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:37:14+08:00 ] 127.0.0.1 /HLcmsAPI/HLcms/titleSearch/?title=%E5%B0%B1%E9%85%B1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: selected_area_id E:\xampp\htdocs\HLcmsAPI\Application\Home\Controller\HLcmsController.class.php 第 767 行.
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time`,`node_id` FROM `hl_content` WHERE `title` LIKE '%就酱%' AND `status` = 2 AND `types`  not in(100, 101)  AND `area_id`  in(3, 0)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:37:17+08:00 ] 127.0.0.1 /HLcmsAPI/HLcms/titleSearch/?title=%E5%B0%B1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time`,`node_id` FROM `hl_content` WHERE `title` LIKE '%就%' AND `status` = 2 AND `types`  not in(100, 101)  AND `area_id`  in(3, 0)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:37:18+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 3 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:37:18+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:37:20+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:37:21+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '35' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 35  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '39' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:37:21+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0090s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:37:21+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0060s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '32' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 32  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '36' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:37:22+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0080s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '33' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '37' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:37:23+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=34
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '34' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 34  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '38' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:37:25+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode/?nodeID=35
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '35' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 35  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '39' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:37:29+08:00 ] 127.0.0.1 /HLcmsAPI/HLcms/titleSearch/?title=%E5%B0%B1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time`,`node_id` FROM `hl_content` WHERE `title` LIKE '%就%' AND `status` = 2 AND `types`  not in(100, 101)  AND `area_id`  in(3, 0)  ORDER BY orders desc  [ RunTime:0.0000s ]
+
+[ 2017-02-25T17:37:29+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0020s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 2 AND `style` = 2 ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '14' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 14  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '23' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-25T17:37:29+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=14
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0020s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 14 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 14 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '14' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 14  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '23' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:37:30+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=15
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '15' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 15  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '24' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:37:30+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0080s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '16' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 16  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '25' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:37:31+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '17' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 17  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '26' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:37:31+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=18
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0070s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 18 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 18 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '18' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 18  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '27' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:37:32+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=19
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0100s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 19 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 19 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '19' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 19  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '28' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:37:32+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=21
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0040s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '21' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 21  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '30' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:37:33+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '22' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 22  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '31' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-25T17:37:34+08:00 ] 192.168.1.158 /HLcmsAPI/HLcms/getNode?nodeID=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `hl_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0110s ]
+SQL: SELECT `style` FROM `hl_node` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `hl_node` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pic`,`videos` FROM `hl_content` WHERE `node_id` = '20' AND `status` = 2 AND `types` in(100, 101) ORDER BY id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hl_node` WHERE `pid` = 20  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time` FROM `hl_content` WHERE `node_id` = '29' AND `status` = 2 AND `types`  not in(100, 101)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-25T17:39:36+08:00 ] 127.0.0.1 /HLcmsAPI/HLcms/titleSearch/?title=%E5%B0%B1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hl_content` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`title_pic`,`types`,`release_time`,`node_id` FROM `hl_content` WHERE `title` LIKE '%就%' AND `status` = 2 AND `types`  not in(100, 101)  AND `area_id`  in(3, 0)  ORDER BY orders desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
